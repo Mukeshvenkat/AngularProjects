@@ -28,6 +28,6 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   addToShoppingList(){  
-    this.shoppinglistService.addIngredients(this.recipe.ingredient);
+    this.shoppinglistService.addIngredients(this.recipe.ingredients);
   }
 }
