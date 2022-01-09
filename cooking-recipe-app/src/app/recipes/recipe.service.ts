@@ -35,14 +35,17 @@ export class RecipeService {
   }
 
   addRecipe(recipe: Recipe) {
-    console.log('=======ON ADD RECIPE==========', recipe);
     this.recipes.push(recipe);
     this.recipesChanged.next(this.recipes.slice());
   }
 
   updateRecipe (index: number, newRecipe: Recipe) {
-    console.log('=======ON UPDATE RECIPE==========', newRecipe);
     this.recipes[index] = newRecipe;
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  deleteRecipe(index: number){
+    this.recipes.splice(index, 1);
     this.recipesChanged.next(this.recipes.slice());
   }
 }
