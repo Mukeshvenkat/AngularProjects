@@ -20,6 +20,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { DataStorageService } from './shared/data-storage.service';
 import { RecipesResolverService } from './recipes/recipes-resolver.service';
 import { AuthComponent } from './auth/auth.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,13 @@ import { AuthComponent } from './auth/auth.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [RecipeService, ShoppingListService, DataStorageService, RecipesResolverService],
+  providers: [
+    RecipeService, 
+    ShoppingListService, 
+    DataStorageService, 
+    RecipesResolverService,
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
