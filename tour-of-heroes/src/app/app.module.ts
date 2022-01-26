@@ -9,6 +9,7 @@ import { HeroesDetailsComponent } from './heroes/heroes-details/heroes-details.c
 import { HeroesListComponent } from './heroes/heroes-list/heroes-list.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HeroesService } from './heroes/heroes.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

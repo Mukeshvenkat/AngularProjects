@@ -1,1 +1,5 @@
-<p>heroes-list works!</p>
+<div>
+    <li *ngFor="let heroes of heroesList">
+        <ul>{{ heroes.id }} | {{ heroes.name }}</ul>
+    </li>
+</div>
